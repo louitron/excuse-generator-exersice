@@ -1,6 +1,6 @@
 let who = [
   "The dog",
-  "My grandma",
+  "My teacher",
   "My pet alligator",
   "A total stranger",
   "My bird",
@@ -15,6 +15,14 @@ let when = [
   "while I was praying",
 ];
 
+gsap.from(".test", {
+  duration: 0.5,
+  opacity: 0,
+  delay: 1.5,
+  ease: "power.4",
+});
+gsap.from(".mainText", { duration: 1.5, x: "200%", ease: "power4.out" });
+
 function getRandomIndex(array) {
   return Math.floor(Math.random() * array.length);
 }
@@ -28,4 +36,9 @@ function genRanExcuse() {
     what[getRandomIndex(what)] +
     " " +
     when[getRandomIndex(when)];
+  gsap.fromTo(
+    "#excuse",
+    { duration: 1, scale: 0, ease: "bounce" },
+    { duration: 1, scale: 1, ease: "bounce" }
+  );
 }
