@@ -15,9 +15,16 @@ let when = [
   "while I was praying",
 ];
 
-gsap.from(".test", {
+gsap.fromTo(
+  ".bg",
+  { backgroundColor: "gray" },
+  { duration: 1, backgroundColor: "black" }
+);
+gsap.from(".button", {
   duration: 0.5,
   opacity: 0,
+  y: "40%",
+  backgroundColor: "blue",
   delay: 1.5,
   ease: "power.4",
 });
@@ -36,9 +43,11 @@ function genRanExcuse() {
     what[getRandomIndex(what)] +
     " " +
     when[getRandomIndex(when)];
+
+  gsap.to(".mainText", { duration: 1, y: "-20%", ease: "power4.out" });
   gsap.fromTo(
     "#excuse",
-    { duration: 1, scale: 0, ease: "bounce" },
-    { duration: 1, scale: 1, ease: "bounce" }
+    { duration: 1, y: "-100%", scale: 0, ease: "bounce" },
+    { duration: 1, y: "5%", scale: 1, ease: "bounce" }
   );
 }
