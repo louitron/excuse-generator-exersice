@@ -17,14 +17,14 @@ let when = [
 
 gsap.fromTo(
   ".bg",
-  { backgroundColor: "gray" },
-  { duration: 1, backgroundColor: "black" }
+  { backgroundColor: "black" },
+  { duration: 1, backgroundColor: "green" }
 );
 gsap.from(".button", {
   duration: 0.5,
   opacity: 0,
   y: "40%",
-  backgroundColor: "blue",
+  backgroundColor: "gray",
   delay: 1.5,
   ease: "power.4",
 });
@@ -44,10 +44,18 @@ function genRanExcuse() {
     " " +
     when[getRandomIndex(when)];
 
-  gsap.to(".mainText", { duration: 1, y: "-20%", ease: "power4.out" });
+  gsap.to(".mainText", { duration: 1, ease: "power4.out" });
+  gsap.to(".button", { duration: 1, y: "70%", ease: "power4.out" });
   gsap.fromTo(
     "#excuse",
-    { duration: 1, y: "-100%", scale: 0, ease: "bounce" },
-    { duration: 1, y: "5%", scale: 1, ease: "bounce" }
+    { duration: 1, y: "-100%", scale: 0, opacity: "0%", ease: "bounce" },
+    {
+      duration: 1.5,
+      delay: 0.5,
+      y: "5%",
+      scale: 1,
+      opacity: "100%",
+      ease: "power4.out",
+    }
   );
 }

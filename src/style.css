@@ -2,10 +2,15 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
 
-/* h1 {
-  visibility: hidden;
+.container {
+  margin: auto;
+  width: 100%;
+  text-align: center;
+  padding-top: 100px;
+  height: 500px;
 }
 
-#hideMe {
-  visibility: hidden;
-} */
+h1,
+p {
+  color: aquamarine;
+}
