@@ -2,17 +2,37 @@ let who = [
   "The dog",
   "My teacher",
   "My pet alligator",
-  "A total stranger",
+  "This random chick",
   "My bird",
+  "The President of the United States",
 ];
-let action = ["ate", "peed on", "crushed", "broke", "pooped on"];
-let what = ["my homework", "my keys", "my car", "an airplane", "the neighbors"];
+let action = [
+  "ate",
+  "peed on",
+  "crushed",
+  "broke",
+  "pooped on",
+  "jumped on",
+  "started yelling at",
+];
+let what = [
+  "my homework",
+  "my keys",
+  "my car",
+  "an airplane",
+  "the neighbors",
+  "my pet raccoon",
+  "a wild goose",
+  "a rabid iguana",
+  "a total stranger",
+];
 let when = [
   "before the class",
   "right as I was getting ready to leave",
   "I was almost done getting ready",
   "during my lunch",
   "while I was praying",
+  "when I was waking up",
 ];
 
 gsap.fromTo(
