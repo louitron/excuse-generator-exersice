@@ -9,6 +9,7 @@ let who = [
   "My pet alligator",
   "This random chick",
   "My bird",
+  "I",
   "The President of the United States"
 ];
 let action = [
@@ -33,6 +34,7 @@ let what = [
 ];
 let when = [
   "before the class",
+  "last night",
   "right as I was getting ready to leave",
   "I was almost done getting ready",
   "during my lunch",
@@ -48,7 +50,7 @@ window.onload = function() {
   gsap.fromTo(
     ".bg",
     { backgroundColor: "black" },
-    { duration: 1, backgroundColor: "green" }
+    { duration: 1, backgroundColor: "olive" }
   );
   gsap.from(".button", {
     duration: 0.5,
